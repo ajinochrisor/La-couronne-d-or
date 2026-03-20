@@ -22,8 +22,6 @@ export default function ClientsSection() {
     setShowModal(false);
   };
 
-  const allCategories = ["Tous", ...FOOD_CATEGORIES, ...DRINK_CATEGORIES];
-  const filteredMenu = menuFilter === "Tous" ? MENU : MENU.filter(m => m.category === menuFilter);
   const dailyItems = MENU.filter(m => m.daily && FOOD_CATEGORIES.includes(m.category));
 
   return (
